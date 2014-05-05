@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Devrea">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Devrea</title>
+	<link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<div class="wrapper center-text">
+
+	<header>
+		<nav class="row">
+			<ul class="large-12.centered medium-12.centered small-12.centered columns">
+				<li class="home-link"><a href="index.html">Go Home</a></li>
+				<li class='movie-goer'>
+					<ul>
+						<li class="movie-link">Movie Goers</li>
+						<li class="login">
+							<p>Login</p>
+							<form>
+        						Username <input id='username' type="text" name="email">
+        						Password <input id='password' type="password" name="pass">
+        						<input class="button" type="submit" value="Go">
+    						</form></li>
+						<li class="sign-up"><a href="sign-up.html">Sign up</a></li>
+					</ul>
+				</li>
+				<li class="movie-list-link"><a href="movie-list.html">Movie Lists</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="buttons">
+		<button class="sign-in-m">Sign In</button>
+		<button class="filter-m"><img src='img/filter.png' alt="Devrea"/></button>
+		<button class="sign-m" id="sign-up-button">Sign Up</button>
+		<form>
+        	Username <input id='user' type="text" name="email">
+        	Password <input id='pass' type="password" name="pass">
+        	<input class="button" type="submit" value="Go">
+    		</form>
+	</section>
+
+	<section class="search row">
+		<article class="large-12.centered">
+		<img class="logo" src='img/logo.png' alt="Devrea"/>
+		<form class="search-form">
+		<input id='search' type="text" size="100"/>
+		<button id='search-button'><div>G</div><img src='img/search.png' alt="GO"/></button>
+		<div class='filter'><img src='img/filter.png' alt="filters"/></div>
+		</form>
+		</article>
+	</section>
+
+	<!--filer search results form-->
+		<div class='filter-select'>
+				<h1 id='filter-label'>Filters</h1>
+				
+			<div class='year-box'>
+				<h1 class="year-label">Year</h1>
+				<input id="date1" type="date" name="bday">
+				<h2 class='to-label'>to</h2>
+				<input id="date2" type="date" name="bday">
+			</div>
+
+			<div class='review-box'>
+				<h1 class="review-label">Review</h1>
+				<select id='review' name="review">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+			</div>
+			<div class='rating-box'>
+				<h1 class='rating-label'>Rating</h1>
+				<img src='img/ESRB_E.png' alt="esrb"/>
+				<input type="checkbox" name="checkboxG1" id="checkboxG1" class="css-checkbox" /><label for="checkboxG1" class="css-label"></label>
+				<img src='img/ESRB_T.png' alt="esrb"/>
+				<input type="checkbox" name="checkboxG2" id="checkboxG2" class="css-checkbox" /><label for="checkboxG2" class="css-label"></label>
+				<img src='img/ESRB_M.png' alt="esrb"/>
+				<input type="checkbox" name="checkboxG3" id="checkboxG3" class="css-checkbox" /><label for="checkboxG3" class="css-label"></label>
+			</div>
+		</div>
+
+	<section class="movies result row">
+		<h1 class="show-result">Results for</h1>
+			<ul>
+   				<li><img src='img/hot2.jpg' alt="Devrea"/></li>
+   				<li><img src='img/hot3.jpg' alt="Devrea"/></li>
+   				<li><img src='img/old2.png' alt="Devrea"/></li>
+   				<li><img src='img/old3.jpg' alt="Devrea"/></li>
+   				<li><img src='img/top2.jpg' alt="Devrea"/></li>
+   				<li><img src='img/top3.jpg' alt="Devrea"/></li>
+			</ul>
+		</aside>
+	</section>
+
+
+	
+
+	<footer class="row">
+		<ul>
+			<a href="#"><li class="about-link">About</li></a>
+			<a href="#"><li class="inc-link">Devrea</li></a>
+			<a href="#"><li class="face-link"><img src='img/facebook.png' alt="facebook"/></li></a>
+			<a href="#"><li class="twitter-link"><img src='img/twitter.png' alt="twitter"/></li></a>
+		</ul>
+	</footer>
+ 
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="js/jquery.js"></script>
+<script src="js/jquery.roundabout.js"></script>
+<script src="js/jquery.roundabout-shapes.js"></script>
+<script src="js/jquery.event.drag-2.2.js"></script>
+<script src="js/jquery.event.drop-2.2.js"></script>
+<script>
+   $(document).ready(function() {
+
+      $('.movies ul').roundabout({
+      	 enableDrag: true,
+      	 autoplay: false,
+         autoplayDuration: 2000,
+         autoplayPauseOnHover: true
+      });
+   });
+</script>
+<script src="js/main.js"></script>
+</div>
+</body>
+
+</html>
